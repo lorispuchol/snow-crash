@@ -30,6 +30,6 @@ john file --show
 ```
 
 ### Result
-`abcdefg` = password of **_"flag01"_**
+`abcdefg` = password of `flag01`
 
 `getflag` = `f2av5il02puano7naaf6adaaf`
