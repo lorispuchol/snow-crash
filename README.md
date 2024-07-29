@@ -9,6 +9,6 @@ We may not be able to connect to a `flagXX` account - in this case, we will have
 - John the ripper password cracker
 - gdb
 - scp (file copy through the network)
-- pcap analyzer
+- pcap analyzer (tcpdump, tshark, wireshark ...)
 - cloudshark.com
 - dcode.fr
