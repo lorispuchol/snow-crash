@@ -10,6 +10,29 @@ this print `level07` and exits.
 After some research, we can see that the binary print the content of the environment variable `LOGNAME`.
 
 ```bash
+strings level07
+```
+
+shows
+```console
+asprintf
+getenv
+setresuid
+system
+getegid
+geteuid
+__libc_start_main
+GLIBC_2.0
+PTRh 
+UWVS
+[^_]
+LOGNAME
+/bin/echo %s 
+```
+
+
+
+```bash
 level07@SnowCrash:~$ export LOGNAME="test"
 level07@SnowCrash:~$ ./level07
 test
